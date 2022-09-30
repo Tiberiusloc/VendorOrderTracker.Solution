@@ -34,5 +34,19 @@ namespace PierresVendors.Tests
       //Assert
       Assert.AreEqual(name, result);
     }
+    [TestMethod]
+    public void GetId_ReturnsVendorId_Int()
+    {
+      //Arrange
+      string name = "Suzy";
+      string details= "Suzy's Donuts";
+      Vendor newVendor = new Vendor(name, details);
+
+      //Act
+      int result = newVendor.Id;
+
+      //Assert
+      Assert.AreEqual(1, result);
+    }
   }
 }

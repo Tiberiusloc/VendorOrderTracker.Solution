@@ -90,5 +90,16 @@ namespace PierresVendors.Tests
       //Assert
       CollectionAssert.AreEqual(newList, result);
     }
+    [TestMethod]
+    public void GetId_OrdersInstantiateWithAnIdAndGetterReturn_Int()
+    {
+      string description = "Donut";
+      double price = 4;
+      string title = "Donut Order";
+      DateTime date = new DateTime(2022, 07, 24);
+      Order newOrder = new Order(description, price, title, date);
+      int result = newOrder.Id;
+      Assert.AreEqual(1,result);
+    }
   }
 }
