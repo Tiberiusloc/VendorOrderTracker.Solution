@@ -65,6 +65,23 @@ namespace PierresVendors.Tests
 
       //Assert
       CollectionAssert.AreEqual(newList, result);
+    }    
+    [TestMethod]
+    public void Find_ReturnsCorrectVendor_Vendor()
+    {
+      //Arrange
+      string name01 = "Suzy";
+      string details01 = "Suzy's Donuts";
+      string name02 = "John";
+      string details02 = "John's Donuts";
+      Vendor newVendor1 = new Vendor(name01, details01);
+      Vendor newVendor2 = new Vendor(name02, details02);
+
+      //Act
+      Vendor result = Vendor.Find(2);
+
+      //Assert
+      Assert.AreEqual(newVendor2, result);
     }
   }
 }

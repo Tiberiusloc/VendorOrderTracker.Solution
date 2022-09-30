@@ -122,5 +122,19 @@ namespace PierresVendors.Tests
       //Assert
       Assert.AreEqual(newOrder2, result);
     }
+    [TestMethod]
+    public void GetPrice_OrderReturnPrice_Double()
+    {
+      // Arrange
+      string description = "Chocolate";
+      string title = "Donut Order";
+      double price = 4;
+      DateTime date = new DateTime(2022, 07, 24);
+      // Act
+      Order newOrder = new Order(description, price, title, date );
+      double result = newOrder.Price;
+      // Assert
+      Assert.AreEqual(price, result);
+    }
   }
 }
