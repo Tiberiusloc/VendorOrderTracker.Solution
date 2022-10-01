@@ -83,5 +83,26 @@ namespace PierresVendors.Tests
       //Assert
       Assert.AreEqual(newVendor2, result);
     }
+    [TestMethod]
+    public void AddItem_AssociatesItemWithCategory_ItemList()
+    {
+      //Arrange
+      string description = "Donut.";
+      double price = 4;
+      string title = "Suzie's Donut";
+      DateTime date = new DateTime(1999,01,05);
+      Order newOrder = new Order(description, price, title, date);
+      List<Order> newList = new List<Order> { newOrder };
+      string name = "Suzy";
+      string details = "Suzy's Donuts";
+      Vendor newVendor = new Vendor(name, details);
+      newVendor.AddOrder(newOrder);
+
+      //Act
+      List<Order> result = newVendor.Orders;
+
+      //Assert
+      CollectionAssert.AreEqual(newList, result);
+    }
   }
 }

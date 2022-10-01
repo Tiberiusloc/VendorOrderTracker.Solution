@@ -28,7 +28,7 @@ namespace PierresVendors.Tests
       string title = "Donut Order";
       string description = "Donut";
       double price = 4;
-      DateTime date = new DateTime(1999, 07, 24);
+      DateTime date = new DateTime(1999, 01, 05);
 
       //Act
       Order newOrder = new Order(description, price, title, date);
@@ -74,11 +74,11 @@ namespace PierresVendors.Tests
       string description01 = "Donut1";
       double price01 = 4;
       string title01 = "Donut Order1";
-      DateTime date01 = new DateTime(1999, 07, 24);
+      DateTime date01 = new DateTime(1999, 01, 05);
 
       string description02 = "Donut2";
       string title02 = "Donut Order2";
-      DateTime date02 = new DateTime(1999, 07, 24);
+      DateTime date02 = new DateTime(1999, 01, 05);
       double price02 = 4;
       Order newOrder1 = new Order(description01, price01, title01, date01);
       Order newOrder2 = new Order(description02, price02, title02, date02);
@@ -129,7 +129,7 @@ namespace PierresVendors.Tests
       string description = "Chocolate";
       string title = "Donut Order";
       double price = 4;
-      DateTime date = new DateTime(2022, 07, 24);
+      DateTime date = new DateTime(1999, 01, 05);
       // Act
       Order newOrder = new Order(description, price, title, date );
       double result = newOrder.Price;
